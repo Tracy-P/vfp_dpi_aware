@@ -1,0 +1,34 @@
+# VFP generated files
+*.[Ee][Rr][Rr]
+*.[Mm][Pp][Rr]
+_[Cc][Oo][Mm][Mm][Aa][Nn][Dd].[Pp][Rr][Gg]
+
+# VFP compiled files
+*.[Ff][Xx][Pp]
+*.[Mm][Pp][Xx]
+*.[Qq][Pp][Xx]
+*.[Ss][Cc][Xx]
+*.[Ss][Cc][Tt]
+*.[Vv][Cc][Xx]
+*.[Vv][Cc][Tt]
+*.[Dd][Bb][Ff]
+*.[Ff][Pp][Tt]
+*.[Cc][Dd][Xx]
+*.[Pp][Jj][Xx]
+*.[Pp][Jj][Tt]
+
+# VFP backup files
+*.[Bb][Aa][Kk]
+*.[Tt][Bb][Kk]
+
+# Misc backup files
+*.[Oo][Rr][Ii][Gg]
+*.[Ss][Aa][Vv][Ee]
+*.[Zz][Ii][Pp]
+
+# Folders to exclude
+[Bb][Ii][Nn]/
+[Oo][Bb][Jj]/
+
+# Test related files
+[Tt][Ee][Ss][Tt][Ss]/[Ff][Xx][Uu]*.*

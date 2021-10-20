@@ -1,0 +1,9 @@
+IF WEXIST("Standard")
+	HIDE WINDOW "Standard"
+ENDIF 
+SET STATUS BAR OFF 
+*!*	ACTIVATE WINDOW "Command"
+*!*	DOCK WINDOW "Command" POSITION 3
+
+DO main.prg
+QUIT 

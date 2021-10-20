@@ -1,0 +1,7 @@
+resource=.\resource\foxuser.dbf
+safety=off
+deleted=off
+codepage=1252
+collate=MACHINE
+title=System Aware
+command=do .\resource\startup.prg

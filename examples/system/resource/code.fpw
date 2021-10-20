@@ -1,0 +1,8 @@
+resource=off
+safety=off
+deleted=off
+codepage=1252
+collate=MACHINE
+title=System Aware (Code)
+talk=off
+command=do resource\code.prg
