@@ -31,6 +31,7 @@ DEFINE CLASS dpiresizer AS custom
 		*m: processoptiongroup
 		*m: processpage
 		*m: processpageframe
+		*m: processshape
 		*m: processspinner
 		*m: processtextbox
 		*m: reapplyanchorproperty
@@ -233,6 +234,7 @@ DEFINE CLASS dpiresizer AS custom
 		This.ProcessOptionGroup(currentControl)
 		This.ProcessPage(currentControl)
 		This.ProcessPageFrame(currentControl)
+		This.ProcessShape(currentControl)
 		This.ProcessSpinner(currentControl)
 		This.ProcessTextbox(currentControl)
 		
@@ -445,6 +447,14 @@ DEFINE CLASS dpiresizer AS custom
 			this.SetNewPosition(currentControl)
 		ENDIF 
 		
+	ENDPROC
+
+	PROCEDURE processshape
+		LPARAMETERS currentControl as Shape
+		IF LOWER(currentControl.BaseClass) == "shape"
+			This.SetNewSize(currentControl)
+			This.SetNewPosition(currentControl)
+		ENDIF 
 	ENDPROC
 
 	PROCEDURE processspinner
