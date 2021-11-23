@@ -17,7 +17,7 @@ This class library can be configured to work as System or PerMonitor.
 - Adjusting the size and font of items within a Control class.
 
 ## Getting started
-<span style="color:darkred">This project was initially at C:\work. The shortcuts in the Examples may need to adjusted</span>
+<span style="color:darkred">This project was initially at C:\work\vfp_dpi_aware. The shortcuts in the Examples may need to adjusted</span>
 
 This class library can be used to with either System or PerMonitor mode. PerMonitor mode will require Windows 10 Creator update at the minimum. 
 
