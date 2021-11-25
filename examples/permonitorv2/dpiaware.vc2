@@ -31,6 +31,7 @@ DEFINE CLASS dpiresizer AS custom
 		*m: processoptiongroup
 		*m: processpage
 		*m: processpageframe
+		*m: processshape
 		*m: processspinner
 		*m: processtextbox
 		*m: reapplyanchorproperty
@@ -233,6 +234,7 @@ DEFINE CLASS dpiresizer AS custom
 		This.ProcessOptionGroup(currentControl)
 		This.ProcessPage(currentControl)
 		This.ProcessPageFrame(currentControl)
+		This.ProcessShape(currentControl)
 		This.ProcessSpinner(currentControl)
 		This.ProcessTextbox(currentControl)
 		
@@ -295,7 +297,7 @@ DEFINE CLASS dpiresizer AS custom
 			FOR controlLoop = 1 TO currentControl.ColumnCount
 				this.ProcessCurrentControl(currentControl.Columns(controlLoop))
 			NEXT 
-			IF LOWER(PEMSTATUS(currentControl, "SetColumnWidths",3)) = "method"
+			IF PEMSTATUS(currentControl, "SetColumnWidths", 5) AND LOWER(PEMSTATUS(currentControl, "SetColumnWidths",3)) = "method"
 				currentControl.SetColumnWidths()
 			ENDIF 
 			this.SetNewSize(currentControl)
@@ -303,7 +305,7 @@ DEFINE CLASS dpiresizer AS custom
 			this.SetNewFontSize(currentControl)
 			currentControl.HeaderHeight = currentControl.OriginalHeaderHeight * dpiRatio
 			currentControl.RowHeight = currentControl.OriginalRowHeight * dpiRatio
-			IF LOWER(PEMSTATUS(currentControl, "SetColumnWidths",3)) == "method"
+			IF PEMSTATUS(currentControl, "SetColumnWidths", 5) AND LOWER(PEMSTATUS(currentControl, "SetColumnWidths",3)) == "method"
 				currentControl.SetColumnWidths()
 			ENDIF 
 		ENDIF 
@@ -445,6 +447,14 @@ DEFINE CLASS dpiresizer AS custom
 			this.SetNewPosition(currentControl)
 		ENDIF 
 		
+	ENDPROC
+
+	PROCEDURE processshape
+		LPARAMETERS currentControl as Shape
+		IF LOWER(currentControl.BaseClass) == "shape"
+			This.SetNewSize(currentControl)
+			This.SetNewPosition(currentControl)
+		ENDIF 
 	ENDPROC
 
 	PROCEDURE processspinner
